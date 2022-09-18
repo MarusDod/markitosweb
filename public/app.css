@@ -1,0 +1,16 @@
+:root {
+  --bigSize: 30px;
+  --normalSize: 16;
+}
+
+body * {
+  color: white;
+}
+
+button[role="tab"] {
+  background-color: black;
+}
+
+button[role="tab"]:hover {
+  background-color: grey;
+}
