@@ -8,7 +8,7 @@ const style = {
 
 const App = () => (
   <div style={style}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<Homepage />} />

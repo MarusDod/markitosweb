@@ -1,5 +1,3 @@
-import ClipboardIcon from './assets/clipboard.svg'
-
 const mystyle = {
     backgroundColor: "#494356",
     textAlign: "left",
