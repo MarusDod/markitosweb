@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/markitosweb/static/css/main.9bd7a35e.css",
-    "main.js": "/markitosweb/static/js/main.acfcc11f.js",
+    "main.js": "/markitosweb/static/js/main.9ff98a11.js",
     "static/media/perfil.png": "/markitosweb/static/media/perfil.861fddcdc5f2f89fb709.png",
     "static/media/flappy.png": "/markitosweb/static/media/flappy.96f04d20dcf5b79ff252.png",
     "static/media/background.jpg": "/markitosweb/static/media/background.d6022099238e6ddb3a54.jpg",
@@ -11,10 +11,10 @@
     "static/media/haskell.png": "/markitosweb/static/media/haskell.0a3c1e66b4f065d744f5.png",
     "index.html": "/markitosweb/index.html",
     "main.9bd7a35e.css.map": "/markitosweb/static/css/main.9bd7a35e.css.map",
-    "main.acfcc11f.js.map": "/markitosweb/static/js/main.acfcc11f.js.map"
+    "main.9ff98a11.js.map": "/markitosweb/static/js/main.9ff98a11.js.map"
   },
   "entrypoints": [
     "static/css/main.9bd7a35e.css",
-    "static/js/main.acfcc11f.js"
+    "static/js/main.9ff98a11.js"
   ]
 }
