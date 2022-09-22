@@ -34,6 +34,7 @@ export default () => (
                 src={process.env.PUBLIC_URL + "/favicon.ico"}
                 width="25px"
                 alt="ReactJS"
+                title="ReactJS"
                 />
             ReactJS as I'm a bit crude on frontend.
             The only reason I didn't build this website with pure html/css

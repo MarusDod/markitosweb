@@ -14,14 +14,14 @@ const style = {
 
 const App = () => (
   <div style={style}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/monero" element={<Monero />} />
         <Route path="/blog/nixos" element={<Nixos />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </div>
 )
 

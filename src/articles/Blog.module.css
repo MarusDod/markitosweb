@@ -17,18 +17,18 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
-@media (min-width: 850px) {
+/*@media (min-width: 850px) {
     .threadContainer {
-        /*width: 70%;*/
+        width: 70%;
     }
-}
+}*/
 
 .threadTitle {
     display:flex;
-    align-items: end;
+    align-items: flex-end;
     grid-area: title;
     text-align: left;
     font-family: verdana;

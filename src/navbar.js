@@ -1,8 +1,8 @@
 import Nav from 'react-bootstrap/Nav'
 import NavLink from 'react-bootstrap/NavLink'
 import Perfil from './assets/perfil.png'
-import { ButtonGroup, Container, Dropdown, DropdownButton, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
+import {Container, Dropdown, DropdownButton, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap';
+import MyHashLink from './MyHashLink'
 
 export default () => {
     const socials = {
@@ -36,11 +36,11 @@ export default () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav navbarScroll variant="pills">
-                        <Nav.Link href="/#about">About</Nav.Link>
-                        <Nav.Link href="/#interests">Interests</Nav.Link>
-                        <Nav.Link href="/#projects">Projects</Nav.Link>
-                        <Nav.Link href="/blog">Blog</Nav.Link>
-                        <Nav.Link href="/#donate">Donate</Nav.Link>
+                        <MyHashLink to="/#about">About</MyHashLink>
+                        <MyHashLink to="/#interests">Interests</MyHashLink>
+                        <MyHashLink to="/#projects">Projects</MyHashLink>
+                        <MyHashLink to="/blog">Blog</MyHashLink>
+                        <MyHashLink to="/#donate">Donate</MyHashLink>
 
                         <Dropdown >
                             <Dropdown.Toggle>Find Me</Dropdown.Toggle>
