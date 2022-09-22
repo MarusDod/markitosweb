@@ -6,25 +6,24 @@ import Header from './Header';
 import Paragraph from './Paragraph.js';
 
 const Choice = ({style,text}) => (
-    <div style={{...style,fontSize:20}}>
+    <div style={{...style,fontSize:25}}>
         {text}
     </div>
 )
 
 export default () => (
     <>
-        <div style={{marginBottom:"50px"}}>
-            <Header>
-                My Personal Projects
-            </Header>
-            <Paragraph>
-                Here are some of the pet projects I've worked on in my freetime
-            </Paragraph>
-        </div>
+        <Header>
+            My Personal Projects
+        </Header>
+        <Paragraph center style={{marginBottom: "2em"}}>
+            Here are some of the pet projects I've worked on in my freetime. Feel free to check 
+            my <a href="https://github.com/MarusDod">Github</a>.
+        </Paragraph>
 
-        <Tab.Container defaultActiveKey={"pathfinding"}>
-            <Row>
-                <Col sm={4}>
+        <Tab.Container defaultActiveKey={"pathfinding"} >
+            <Row style={{width:"100%"}}>
+                <Col sm={4} className="mb-3">
                     <ListGroup >
                         <ListGroup.Item action eventKey="pathfinding">
                             <Choice text={"PathFinding"} />
@@ -43,17 +42,21 @@ export default () => (
                         </ListGroup.Item>
                     </ListGroup>
                 </Col>
-                <Col sm={8}>
+                <Col sm={8} style={{backgroundColor:"rgba(39, 109, 179, 0.1)",borderRadius:"1em"}}>
                     <Tab.Content >
                         <Tab.Pane eventKey="pathfinding">
                             <Paragraph center>
                                 I did a visual demo of the A* algorithm.
                                 <br />
-                                <a href="https://marusdod.github.io/pathfinding/" >
+                                <a style={{wordWrap: "break-word"}} href="https://marusdod.github.io/pathfinding/" >
                                 https://marusdod.github.io/pathfinding/
                                 </a>
                             </Paragraph>
-                            <img src={PathScreenshot} alt="pathfinding example" height={500} width={500}></img>
+                            <img 
+                                src={PathScreenshot} 
+                                alt="pathfinding example" 
+                                height={"90%"} 
+                                width={"90%"} />
                         </Tab.Pane>
                         <Tab.Pane eventKey="tinyscheme">
                             <Paragraph center>
@@ -70,10 +73,11 @@ export default () => (
                                 deadline, answer questions, etc...
                                 </Paragraph>
                                 <img
-                                    src={Bobo}
+                                    src={PathScreenshot}
                                     alt="bobo the bear bot"
-                                    height={200}
-                                    ></img>
+                                    height={"90%"} 
+                                    width={"90%"}
+                                    />
 
                         </Tab.Pane>
                         <Tab.Pane eventKey="brainfuck">
@@ -93,7 +97,8 @@ export default () => (
                                 style={{marginLeft:"auto",marginRight:"auto"}}
                                 alt="flappy bird"
                                 src={Flappy}
-                                height={500}
+                                height={"90%"} 
+                                width={"90%"}
                             >
                             </img>
                         </Tab.Pane>

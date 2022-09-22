@@ -1,15 +1,8 @@
 import Nav from 'react-bootstrap/Nav'
 import NavLink from 'react-bootstrap/NavLink'
 import Perfil from './assets/perfil.png'
-import { HashLink } from 'react-router-hash-link';
-import { Dropdown, NavDropdown } from 'react-bootstrap';
-
-const navlinkStyle = {
-    height:'100%',
-    display:"flex",
-    alignItems:"center",
-    backgroundColor:"rgba(33, 36, 181, 0.3)",
-}
+import { ButtonGroup, Container, Dropdown, DropdownButton, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 
 export default () => {
     const socials = {
@@ -24,42 +17,43 @@ export default () => {
     }
 
     return (
-    <div style={{position: "fixed",width:"100%"}}>
-        <Nav variant="pills">
-            <Nav.Item>
-                <img src={Perfil} alt="eu haha" style={{...navlinkStyle,borderRadius:40,height:"auto",width:"40px" }} />
-            </Nav.Item>
-            <Nav.Item>
-                <h3 style={{...navlinkStyle,paddingLeft: 10}}>
-                    Marcos Domingues
-                </h3>
-            </Nav.Item>
-            <Nav.Item style={{flex: 'auto'}} />
-            <Nav.Item>
-                <NavLink href={"#bruv"} style={navlinkStyle} >
-                    Home
-                </NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink href={"#interests"} style={navlinkStyle} >
-                    Interests
-                </NavLink>
-            </Nav.Item>
-            <Nav.Item>
-                <NavLink href={"#projects"}  style={navlinkStyle}>
-                Projects 
-                </NavLink>
-            </Nav.Item>
-            <Dropdown style={{backgroundColor:'blue'}}>
-                <Dropdown.Toggle style={navlinkStyle}>Find Me</Dropdown.Toggle>
-                <Dropdown.Menu style={{backgroundColor:"black"}}>
-                {Object.entries(socials).map(([name,url],index) => (
-                    <Dropdown.Item key={index} as={NavLink} href={url}>
-                            {name}
-                    </Dropdown.Item>
-                ))}
-                </Dropdown.Menu>
-            </Dropdown>
-        </Nav>
-    </div>
+        <Navbar fixed="top" variant="dark" expand="sm" style={{backgroundColor: "rgba(33, 36, 181, 0.3)",width:"100%"}}>
+            <Container fluid>
+                <NavbarBrand style={{display:"flex",gap:"10px",margin:0,padding:0,alignItems:"center"}} >
+                    <img
+                        src={Perfil}
+                        width="40px"
+                        height="40px"
+                        className="d-inline-block align-top"
+                        alt="eu haha"
+                        style={{borderRadius:"20px"}}
+                    /> 
+                    <div>
+                        Marcos Domingues
+                    </div>
+                </NavbarBrand>
+
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse className="justify-content-end">
+                    <Nav navbarScroll variant="pills">
+                        <Nav.Link href="/#about">About</Nav.Link>
+                        <Nav.Link href="/#interests">Interests</Nav.Link>
+                        <Nav.Link href="/#projects">Projects</Nav.Link>
+                        <Nav.Link href="/blog">Blog</Nav.Link>
+                        <Nav.Link href="/#donate">Donate</Nav.Link>
+
+                        <Dropdown >
+                            <Dropdown.Toggle>Find Me</Dropdown.Toggle>
+                            <Dropdown.Menu style={{backgroundColor:"black"}} >
+                                {Object.entries(socials).map(([name,url],index) => (
+                                    <Dropdown.Item key={index} as={NavLink} href={url} style={{backgroundColor:"black",width:"100%",height:"100%",borderRadius:0}} >
+                                            {name}
+                                    </Dropdown.Item>
+                                ))}
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
 )}

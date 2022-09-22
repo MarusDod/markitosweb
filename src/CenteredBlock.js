@@ -1,5 +1,5 @@
-const style = {
-    width: "80%",
+const mystyle = {
+    width: "70%",
     position: "relative",
     display: "flex",
     marginTop: "100px",
@@ -9,12 +9,12 @@ const style = {
     boxShadow: "0 0 1px rgba(255, 255, 255, 0)",
     backgroundColor: "rgba(52, 94, 198, 0.1)",
     borderRadius: "10px",
+    alignItems: "center",
     fontFamily: "Helvetica",
-    textAlign: "center",
     marginLeft: "auto",
     marginRight: "auto",
 }
 
-export default ({id,children}) => (
-    <div id={id} style={style}>{children}</div>
+export default ({id,children,style}) => (
+    <div id={id} style={{...mystyle,...style,}} >{children}</div>
 )

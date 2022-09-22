@@ -1,0 +1,67 @@
+.threadContainer {
+    border-radius: 0 20px 20px 0;
+    background-color: rgba(52, 94, 198, 0.5);
+    height: 5em;
+    width: 100%;
+    border: 2px solid black;
+    margin: 6px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+        'img title'
+        'img description';
+}
+
+.threadList {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+@media (min-width: 850px) {
+    .threadContainer {
+        /*width: 70%;*/
+    }
+}
+
+.threadTitle {
+    display:flex;
+    align-items: end;
+    grid-area: title;
+    text-align: left;
+    font-family: verdana;
+    font-size: .8em;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.threadLogo {
+    grid-area: img;
+    padding:0 10px 0 10px;
+    margin-right: auto;
+    width:90%;
+    align-self:center;
+}
+
+.threadDescription {
+    grid-area: description;
+    text-align: left;
+    font-family: verdana;
+    font-size: 1em;
+    color: rgb(156, 154, 154);
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    width: 80%;
+}
+
+
+
+
+
+
+
+

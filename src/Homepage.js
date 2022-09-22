@@ -4,23 +4,28 @@ import Projects from './projects.js';
 import CenteredBlock from './CenteredBlock.js';
 import MyFooter from './MyFooter.js';
 import Interests from './interests.js';
+import Donate from './donate.js';
+import Page from './Page.js';
 
 export default () => {
 
     return (
-        <div style={{display:"flex",flexDirection:"column"}}>
+        <Page>
             <MyNavbar>
             </MyNavbar>
-            <CenteredBlock>
-                <About id="about" />
-            </CenteredBlock>
-            <CenteredBlock id="projects" >
-                <Projects/>
+            <CenteredBlock id="about">
+                <About />
             </CenteredBlock>
             <CenteredBlock id="interests">
                 <Interests />
             </CenteredBlock>
+            <CenteredBlock id="projects" >
+                <Projects/>
+            </CenteredBlock>
+            <CenteredBlock id="donate" >
+                <Donate/>
+            </CenteredBlock>
             <MyFooter />
-        </div>
+        </Page>
     )
 }
