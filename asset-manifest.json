@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/markitosweb/static/css/main.86254a4f.css",
-    "main.js": "/markitosweb/static/js/main.ea19f8c5.js",
+    "main.css": "/markitosweb/static/css/main.f9ffdd7b.css",
+    "main.js": "/markitosweb/static/js/main.9cbb808e.js",
     "static/media/perfil.png": "/markitosweb/static/media/perfil.861fddcdc5f2f89fb709.png",
     "static/media/flappy.png": "/markitosweb/static/media/flappy.96f04d20dcf5b79ff252.png",
     "static/media/background.jpg": "/markitosweb/static/media/background.d6022099238e6ddb3a54.jpg",
@@ -12,11 +12,11 @@
     "static/media/nixos.webp": "/markitosweb/static/media/nixos.912625004c1e7a610c5f.webp",
     "static/media/haskell.png": "/markitosweb/static/media/haskell.0a3c1e66b4f065d744f5.png",
     "index.html": "/markitosweb/index.html",
-    "main.86254a4f.css.map": "/markitosweb/static/css/main.86254a4f.css.map",
-    "main.ea19f8c5.js.map": "/markitosweb/static/js/main.ea19f8c5.js.map"
+    "main.f9ffdd7b.css.map": "/markitosweb/static/css/main.f9ffdd7b.css.map",
+    "main.9cbb808e.js.map": "/markitosweb/static/js/main.9cbb808e.js.map"
   },
   "entrypoints": [
-    "static/css/main.86254a4f.css",
-    "static/js/main.ea19f8c5.js"
+    "static/css/main.f9ffdd7b.css",
+    "static/js/main.9cbb808e.js"
   ]
 }
