@@ -3,55 +3,47 @@ import NavLink from 'react-bootstrap/NavLink'
 import Perfil from './assets/perfil.png'
 import {Container, Dropdown, DropdownButton, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap';
 import MyHashLink from './MyHashLink'
+import { useEffect, useState } from 'react';
 
 export default () => {
-    const socials = {
-        'E-mail': "mailto: markitos.2001@hotmail.com",
-        'LinkedIn': "https://www.linkedin.com/in/marus-dod-b850b0232",
-        'Telegram': "https://telegram.me/MarusDod",
-        'Github': "https://github.com/MarusDod",
-        'Discord': "https://discord.com/channels/@me/975711811083067422/",
-        'Youtube': "https://www.youtube.com/channel/UC93Ccuez4vzuZpC4TPoB2UA",
-        'Instagram': "https://www.instagram.com/marcos_domingues2001",
-        'Facebook': "https://www.facebook.com/marus.dod/",
-    }
+    const [activeTab,setActiveTab] = useState("")
+
+    useEffect(() => {
+        const handler = () => {
+            const hash = window.location.hash.substring(1)
+            setActiveTab(hash)
+        }
+
+        window.addEventListener('hashchange',handler)
+
+        return () => window.removeEventListener('hashchange',handler)
+    },[])
 
     return (
-        <Navbar fixed="top" variant="dark" expand="sm" style={{backgroundColor: "rgba(33, 36, 181, 0.3)",width:"100%"}}>
+        <Navbar fixed="top" variant="dark" expand="md" style={{backgroundColor: "rgba(33, 36, 181, 0.3)",width:"100%",fontSize:"1.2em"}}>
             <Container fluid>
-                <NavbarBrand style={{display:"flex",gap:"10px",margin:0,padding:0,alignItems:"center"}} >
+                <MyHashLink to="/" style={{display:"flex",gap:"10px",margin:0,padding:0,alignItems:"center"}} >
                     <img
                         src={Perfil}
                         width="40px"
-                        height="40px"
                         className="d-inline-block align-top"
                         alt="eu haha"
-                        style={{borderRadius:"20px"}}
+                        style={{borderRadius:"20px",objectFit:"contain"}}
                     /> 
-                    <div>
+                    <div style={{whiteSpace:"nowrap"}}>
                         Marcos Domingues
                     </div>
-                </NavbarBrand>
+                </MyHashLink>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav navbarScroll variant="pills">
-                        <MyHashLink to="/#about">About</MyHashLink>
-                        <MyHashLink to="/#interests">Interests</MyHashLink>
-                        <MyHashLink to="/#projects">Projects</MyHashLink>
+                        <MyHashLink activeTab={activeTab} to="/#about">About</MyHashLink>
+                        <MyHashLink activeTab={activeTab} to="/#interests">Interests</MyHashLink>
+                        <MyHashLink activeTab={activeTab} to="/#projects">Projects</MyHashLink>
                         <MyHashLink to="/blog">Blog</MyHashLink>
-                        <MyHashLink to="/#donate">Donate</MyHashLink>
-
-                        <Dropdown >
-                            <Dropdown.Toggle>Find Me</Dropdown.Toggle>
-                            <Dropdown.Menu style={{backgroundColor:"black"}} >
-                                {Object.entries(socials).map(([name,url],index) => (
-                                    <Dropdown.Item key={index} as={NavLink} href={url} style={{backgroundColor:"black",width:"100%",height:"100%",borderRadius:0}} >
-                                            {name}
-                                    </Dropdown.Item>
-                                ))}
-                            </Dropdown.Menu>
-                        </Dropdown>
+                        <MyHashLink activeTab={activeTab} to="/#donate">Donate</MyHashLink>
+                        <MyHashLink activeTab={activeTab} to="/#findme" style={{backgroundColor:"blue"}}>Find me</MyHashLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

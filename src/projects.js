@@ -1,6 +1,7 @@
 import { ListGroup, Row, Col, Tab } from 'react-bootstrap';
 import PathScreenshot from './assets/Screenshot from 2022-09-13 16-13-31.png'
 import Bobo from './assets/bobo.png'
+import GlowieChat from './assets/glowiechat.png'
 import Flappy from './assets/flappy.png'
 import Header from './Header';
 import Paragraph from './Paragraph.js';
@@ -34,6 +35,9 @@ export default () => (
                         <ListGroup.Item action eventKey="discordbot">
                             <Choice text={"Discord Bot"} />
                         </ListGroup.Item>
+                        <ListGroup.Item action eventKey="glowiechat">
+                            <Choice text={"Glowie Chat"} />
+                        </ListGroup.Item>
                         <ListGroup.Item action eventKey="brainfuck">
                             <Choice text={"Brainfuck"} />
                         </ListGroup.Item>
@@ -53,7 +57,7 @@ export default () => (
                                 </a>
                             </Paragraph>
                             <img 
-                                src={PathScreenshot} 
+                                src={Bobo} 
                                 alt="pathfinding example" 
                                 height={"90%"} 
                                 width={"90%"} />
@@ -64,6 +68,20 @@ export default () => (
                                 I wrote a Scheme interpreter in Haskell
                             </a>
                             </Paragraph>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="glowiechat">
+                            <Paragraph center>
+                                I created a <a href="https://green-river-0b58e9203.1.azurestaticapps.net">IRC web client</a>, mainly meant to be a Telegram "look-alike".
+                                No theming frameworks were used in the making, only React and css styling.
+                                As I didn't find any websocket client to connect with IRC, I thoroughly
+                                enjoyed making a bug-ridden one from scratch.
+                            </Paragraph>
+                            <img
+                                src={GlowieChat}
+                                alt="glowiechat"
+                                height={"90%"} 
+                                width={"90%"}
+                                />
                         </Tab.Pane>
                         <Tab.Pane eventKey="discordbot">
                                 <Paragraph center>

@@ -1,32 +1,52 @@
-const mystyle = {
-    backgroundColor: "black",
-    textAlign: "left",
-    padding:"10px 0px 20px 20px",
-    display:'inline-block',
-    margin: "100px 0px 0px 0px",
-    fontSize:"20px",
+const address = '831fY6E3SVcCj6D6VjkLuvSjGNScd7tgUR3V6SVEcwj9UV76hb9gE4uVkL7vUqd2qpfyrNnaNB1S2CUTNx7cXBBk2Gz5uiZ'
+
+const socials = {
+    'youtube-play': "https://www.youtube.com/channel/UC93Ccuez4vzuZpC4TPoB2UA",
+    "envelope": "mailto: markitos.2001@hotmail.com",
+    'linkedin-square': "https://www.linkedin.com/in/marcos-domingues-366388236/",
+    'telegram': "https://telegram.me/MarusDod",
+    'github': "https://github.com/MarusDod",
+    'instagram': "https://www.instagram.com/marcos_domingues2001",
 }
 
-const address = '831fY6E3SVcCj6D6VjkLuvSjGNScd7tgUR3V6SVEcwj9UV76hb9gE4uVkL7vUqd2qpfyrNnaNB1S2CUTNx7cXBBk2Gz5uiZ'
+const footerStyle = {
+    width:"100%",
+    backgroundColor: "#383838",
+    marginTop: "5em",
+}
+
+const mystyle = {
+    textAlign: "left",
+    fontSize:"20px",
+    margin:"1.5em",
+    padding:"1em",
+    borderBottom:"2px dashed black",
+
+    display:'flex',
+    justifyContent:"center",
+    flexFlow:"row wrap",
+    gap: "1em",
+}
 
 const copyToClipboard = () => {
     navigator.clipboard.writeText(address)
 }
 
+const Social = ({href,name}) => (
+        <a href={href}>
+            <i style={{fontSize:"2em"}} className={`fa fa-${name}`}></i>
+        </a>
+)
+
 export default () => (
-    <footer style={mystyle}>
-        {/*<p>
-            donate :{')'}
-        </p>
-        <p style={{overflow: "hidden",display:"block",width: "calc(90%)",textOverflow: "ellipsis",whiteSpace: "nowrap"}}>
-        XMR address: {address}
-        </p>
-        
-        <button className="btn btn-secondary" onClick={copyToClipboard} title="copy to clipboard">
-            <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-clipboard" viewBox="0 0 16 16">
-                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-            </svg>
-</button>*/}
+    <footer id={'findme'} style={footerStyle} > 
+        <div style={mystyle}>
+            {Object.entries(socials).map(([name,href],index) => (
+                <Social href={href} name={name} key={index} />
+            ))}
+        </div>
+        {/*<div style={{color:"white",textAlign:"center",margin:".5em",fontSize:"1.5em",fontFamily:"Times New Roman"}}>
+            Contact
+            </div>*/}
     </footer>
 )

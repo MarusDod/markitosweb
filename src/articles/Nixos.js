@@ -11,7 +11,7 @@ export default () => {
                 Nixos
             </Header>
             <Paragraph>
-                My favourite OS, and the one that I use and recommend, is {''}
+                My favourite OS, and the one that I use and recommend the most, is {''}
                 <a href="https://nixos.org/">NixOS</a>, a GNU/Linux distribution. 
             </Paragraph>
             <Paragraph>
@@ -27,7 +27,7 @@ export default () => {
                 manageable to import other people's code and extend their functionality in a way that doesn't break.
             </Paragraph>
             <Paragraph>
-                Initially Nix was just a package manager that you could install on just any distro. However
+                Initially Nix was just a package manager that you could install on just about any distro. However
                 the devs got really ambitious and decided to build a fully fledged OS based on Nix.
                 The way it beautifully integrates with Systemd, makes it possible to orchestrate your entire OS
                 via a single <i>configuration.nix</i> file!

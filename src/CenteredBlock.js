@@ -1,3 +1,5 @@
+import { forwardRef } from "react"
+
 const mystyle = {
     width: "70%",
     position: "relative",
@@ -15,6 +17,8 @@ const mystyle = {
     marginRight: "auto",
 }
 
-export default ({id,children,style}) => (
-    <div id={id} style={{...mystyle,...style,}} >{children}</div>
+const CenteredBlock = ({id,children,style},ref) => (
+    <div id={id} ref={ref} style={{...mystyle,...style,}} >{children}</div>
 )
+
+export default forwardRef(CenteredBlock)

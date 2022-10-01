@@ -1,21 +1,32 @@
 import { useEffect, useState } from "react";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink, NavHashLink } from "react-router-hash-link";
 
 
-export default ({to,children}) => {
+export default ({to,activeTab,style,children}) => {
     const [enter,setEnter] = useState(false)
 
+    const clickHandler = () => {
+        if(to === "/"){
+            window.scrollTo(0,0)
+        }
+    }
+
     return (
-    <NavHashLink 
+    <HashLink
         onMouseEnter={() => setEnter(true)} 
         onMouseLeave={() => setEnter(false)}
-        smooth to={to} style={{
+        onClick={clickHandler}
+        scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start'})}
+        to={to} 
+        style={{
             textDecoration:"none",
-            margin:"auto",
-            color: "grey",
+            alignSelf:"end",
             padding:"0.5rem",
-            backgroundColor: enter === true ? 'blue':'transparent',
+            borderRadius: "6px",
+            fontFamily: "Poppins",
+            backgroundColor: enter === true ? 'blue': activeTab == to ? 'darkblue' : 'transparent',
+	    ...style
         }}>
         {children}
-    </NavHashLink>
+    </HashLink>
 )}
