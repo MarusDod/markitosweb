@@ -9,8 +9,7 @@ export default () => (
             Interests
         </Header>
         <Paragraph center>
-            I like to lift heavy weights, code recreationally, browse image boards
-            and read the latest chapters of my favourite manga in my freetime.
+            I like to lift heavy weights, code recreationally and browse image boards.
         </Paragraph>
         <Paragraph center>
             I've been big into privacy projects as of late such as
@@ -38,7 +37,8 @@ export default () => (
                 />
             ReactJS as I'm a bit crude on frontend.
             The only reason I didn't build this website with pure html/css
-            is because I find it a bit easier to manage the source code by splitting
+            is because it makes it a little more bearable to add interactivity and
+            to manage the source code by splitting
             it across multiple source files and components.
         </Paragraph>
         <Paragraph center>

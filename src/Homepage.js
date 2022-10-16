@@ -35,8 +35,7 @@ export default () => {
 
     return (
         <Page>
-            <MyNavbar>
-            </MyNavbar>
+            <MyNavbar />
             <CenteredBlock ref={sections["about"]} id="about">
                 <About />
             </CenteredBlock>

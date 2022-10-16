@@ -112,7 +112,6 @@ export default () => (
                             </a>
                             </Paragraph >
                             <img
-                                style={{marginLeft:"auto",marginRight:"auto"}}
                                 alt="flappy bird"
                                 src={Flappy}
                                 height={"90%"} 

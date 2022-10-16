@@ -24,7 +24,7 @@ export default ({to,activeTab,style,children}) => {
             padding:"0.5rem",
             borderRadius: "6px",
             fontFamily: "Poppins",
-            backgroundColor: enter === true ? 'blue': activeTab == to ? 'darkblue' : 'transparent',
+            backgroundColor: enter === true ? 'blue': activeTab === to ? 'darkblue' : 'transparent',
 	    ...style
         }}>
         {children}

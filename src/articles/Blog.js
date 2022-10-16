@@ -73,7 +73,7 @@ export default () => {
             <MyNavbar />
             <CenteredBlock style={{
                 height: "80vh",
-                width: width < 850 ? "90%" : "50%",
+                ...(width > 750 ? {width: "50%"} : {}),
             }} >
                 <Header>
                     Articles

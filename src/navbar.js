@@ -41,8 +41,8 @@ export default () => {
                         <MyHashLink activeTab={activeTab} to="/#about">About</MyHashLink>
                         <MyHashLink activeTab={activeTab} to="/#interests">Interests</MyHashLink>
                         <MyHashLink activeTab={activeTab} to="/#projects">Projects</MyHashLink>
-                        <MyHashLink to="/blog">Blog</MyHashLink>
                         <MyHashLink activeTab={activeTab} to="/#donate">Donate</MyHashLink>
+                        <MyHashLink to="/blog">Blog</MyHashLink>
                         <MyHashLink activeTab={activeTab} to="/#findme" style={{backgroundColor:"blue"}}>Find me</MyHashLink>
                     </Nav>
                 </Navbar.Collapse>
