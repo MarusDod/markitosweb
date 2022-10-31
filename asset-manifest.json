@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/markitosweb/static/css/main.cb03c4e0.css",
-    "main.js": "/markitosweb/static/js/main.5cd3cad7.js",
+    "main.js": "/markitosweb/static/js/main.092bb2c9.js",
     "static/media/perfil.png": "/markitosweb/static/media/perfil.861fddcdc5f2f89fb709.png",
     "static/media/glowiechat.png": "/markitosweb/static/media/glowiechat.df84e5b00accd79deff3.png",
     "static/media/flappy.png": "/markitosweb/static/media/flappy.96f04d20dcf5b79ff252.png",
@@ -14,10 +14,10 @@
     "static/media/haskell.png": "/markitosweb/static/media/haskell.0a3c1e66b4f065d744f5.png",
     "index.html": "/markitosweb/index.html",
     "main.cb03c4e0.css.map": "/markitosweb/static/css/main.cb03c4e0.css.map",
-    "main.5cd3cad7.js.map": "/markitosweb/static/js/main.5cd3cad7.js.map"
+    "main.092bb2c9.js.map": "/markitosweb/static/js/main.092bb2c9.js.map"
   },
   "entrypoints": [
     "static/css/main.cb03c4e0.css",
-    "static/js/main.5cd3cad7.js"
+    "static/js/main.092bb2c9.js"
   ]
 }
