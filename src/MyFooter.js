@@ -2,7 +2,7 @@ const address = '831fY6E3SVcCj6D6VjkLuvSjGNScd7tgUR3V6SVEcwj9UV76hb9gE4uVkL7vUqd
 
 const socials = {
     'youtube-play': "https://www.youtube.com/channel/UC93Ccuez4vzuZpC4TPoB2UA",
-    "envelope": "mailto: markitos.2001@hotmail.com",
+    "envelope": "mailto: dev.mail.marcos@proton.me",
     'linkedin-square': "https://www.linkedin.com/in/marcos-domingues-366388236/",
     'telegram': "https://telegram.me/MarusDod",
     'github': "https://github.com/MarusDod",
