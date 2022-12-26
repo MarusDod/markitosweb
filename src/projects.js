@@ -57,7 +57,7 @@ export default () => (
                                 </a>
                             </Paragraph>
                             <img 
-                                src={Bobo} 
+                                src={PathScreenshot} 
                                 alt="pathfinding example" 
                                 height={"90%"} 
                                 width={"90%"} />
@@ -91,7 +91,7 @@ export default () => (
                                 deadline, answer questions, etc...
                                 </Paragraph>
                                 <img
-                                    src={PathScreenshot}
+                                    src={Bobo}
                                     alt="bobo the bear bot"
                                     height={"90%"} 
                                     width={"90%"}
