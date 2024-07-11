@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/markitosweb/static/css/main.cb03c4e0.css",
-    "main.js": "/markitosweb/static/js/main.65193fec.js",
-    "static/media/perfil.png": "/markitosweb/static/media/perfil.861fddcdc5f2f89fb709.png",
+    "main.css": "/markitosweb/static/css/main.756d9965.css",
+    "main.js": "/markitosweb/static/js/main.ba89839b.js",
+    "static/media/me.png": "/markitosweb/static/media/me.de31d436bab46cb3cbc9.png",
     "static/media/aoc.png": "/markitosweb/static/media/aoc.0446e6d11c8495e5cc75.png",
     "static/media/glowiechat.png": "/markitosweb/static/media/glowiechat.df84e5b00accd79deff3.png",
     "static/media/flappy.png": "/markitosweb/static/media/flappy.96f04d20dcf5b79ff252.png",
@@ -13,12 +13,13 @@
     "static/media/bobo.png": "/markitosweb/static/media/bobo.a49c20a275495a589566.png",
     "static/media/nixos.webp": "/markitosweb/static/media/nixos.912625004c1e7a610c5f.webp",
     "static/media/haskell.png": "/markitosweb/static/media/haskell.0a3c1e66b4f065d744f5.png",
+    "static/media/glartek_logo.svg": "/markitosweb/static/media/glartek_logo.ab9fad423bd76b64e3395b0fa265f142.svg",
     "index.html": "/markitosweb/index.html",
-    "main.cb03c4e0.css.map": "/markitosweb/static/css/main.cb03c4e0.css.map",
-    "main.65193fec.js.map": "/markitosweb/static/js/main.65193fec.js.map"
+    "main.756d9965.css.map": "/markitosweb/static/css/main.756d9965.css.map",
+    "main.ba89839b.js.map": "/markitosweb/static/js/main.ba89839b.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb03c4e0.css",
-    "static/js/main.65193fec.js"
+    "static/css/main.756d9965.css",
+    "static/js/main.ba89839b.js"
   ]
 }
